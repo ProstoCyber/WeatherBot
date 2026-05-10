@@ -90,7 +90,7 @@ async def now(message: Message):
 async def main():
     logging.basicConfig(level=logging.INFO)
     await db.create_tables() # Создание таблиц в БД
-    scheduler.add_job(send_hourly_weather, "interval", hours=1) # Создание цикла, который в xx:00 отправляет всем отчёт о погоде
+    scheduler.add_job(send_hourly_weather, "cron", minute=0, second=0) # Создание цикла, который в xx:00 отправляет всем отчёт о погоде
     scheduler.start() # Старт цикла
     await dp.start_polling(bot) # Старт бота
 
