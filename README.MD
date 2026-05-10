@@ -33,7 +33,7 @@ docker-compose up -d --build
 ### weatherbot.py: 
 Входная точка, инициализация бота, роутеров и планировщика.
 
-### db.py:
+### database.py:
 Описание моделей SQLAlchemy и асинхронных методов работы с PostgreSQL.
 
 ### Dockerfile:
